@@ -8,7 +8,7 @@ This repository provides code and reproducibility resources for **FedCKR**, a cl
 
 ## Installation
 
-An example environment:
+An example environment (works for me):
 
 ```
 Ubuntu 24.04
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 ## Datasets Preparation
 
-We evaluate FedCKR on four benchmark datasets:
+FedCKR is evaluated on four benchmark datasets:
 
 - CIFAR-10
 - CIFAR-100
@@ -35,11 +35,11 @@ We evaluate FedCKR on four benchmark datasets:
 
 The client data are partitioned using a Dirichlet distribution to construct label-skewed non-IID settings.
 
-The datasets can be downloaded through `torchvision` or prepared in the local data directory.
+The datasets can be automatically downloaded through PyTorch or prepared in the local data directory.
 
 Example directory structure:
 
-```
+```text
 data/
 ├── cifar10/
 ├── cifar100/
@@ -50,8 +50,6 @@ data/
 ## Training
 
 FedCKR is designed for personalized federated learning under label-skewed non-IID data.
-
-Training scripts and implementation details are provided in this repository.
 
 ## Evaluation
 
