@@ -4,6 +4,8 @@
     <img src="FedCKR.png">
 </p>
 
+This repository provides preliminary code and reproducibility resources for **FedCKR**, a class-wise knowledge routing framework for personalized federated learning under label-skewed non-IID data.
+
 > <h2>Additional implementation details and reproduction resources will be released progressively</h2>
 
 ## Installation
@@ -14,63 +16,37 @@ Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
-Official PyTorch implementation of FedCKR for personalized federated learning under label-skewed non-IID data.
-Datasets Preparation
+```
+
+## Datasets Preparation
 
 We evaluate FedCKR on four benchmark datasets:
 
-CIFAR-10
-CIFAR-100
-FashionMNIST
-SVHN
+- CIFAR-10
+- CIFAR-100
+- FashionMNIST
+- SVHN
 
-The client data are partitioned using a Dirichlet distribution with:
+The client data are partitioned using a Dirichlet distribution to construct label-skewed non-IID settings.
 
-beta = 0.1, 0.2, 0.3
+The datasets can be downloaded automatically through ```torchvision``` or prepared in a local data directory.
 
-The datasets can be downloaded automatically through torchvision or placed under the local data directory.
+## Training
 
-Example directory:
+FedCKR is designed for personalized federated learning under label-skewed non-IID data.
 
-data/
-├── cifar10/
-├── cifar100/
-├── fashionmnist/
-└── svhn/
+The complete training implementation and additional reproduction scripts will be released progressively.
 
-The current repository provides dataset loading and preprocessing utilities.
+## Evaluation
 
-Training
-
-FedCKR is evaluated under label-skewed non-IID federated learning settings.
-
-The main experimental settings are:
-
-Number of clients: 10
-Client participation ratio: 0.5
-Local epochs: 1
-Batch size: 64
-Optimizer: SGD
-Learning rate: 0.01
-Dirichlet beta: {0.1, 0.2, 0.3}
-
-The complete FedCKR training implementation and reproduction scripts will be released progressively.
-
-Evaluation
-
-The main evaluation metrics include:
-
-Personalized Accuracy
-Weak-Class Accuracy
-Worst-Client Accuracy
-Global Accuracy
+The main evaluation focuses on personalized performance, weak-class performance, and worst-client performance.
 
 Detailed experimental results are reported in the paper.
 
-Acknowledgment
+## Acknowledgment
 
 We thank the authors of the related federated learning methods and open-source libraries used in this work.
 
-LICENSE
+## LICENSE
 
 License information will be updated with the complete code release.
