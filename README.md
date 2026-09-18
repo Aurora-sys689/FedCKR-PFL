@@ -4,13 +4,19 @@
     <img src="FedCKR.png">
 </p>
 
-This repository provides preliminary code and reproducibility resources for **FedCKR**, a class-wise knowledge routing framework for personalized federated learning under label-skewed non-IID data.
-
-> <h2>Additional implementation details and reproduction resources will be released progressively</h2>
+This repository provides code and reproducibility resources for **FedCKR**, a class-wise knowledge routing framework for personalized federated learning under label-skewed non-IID data.
 
 ## Installation
 
-An example environment (works for me): ```Ubuntu 24.04```, ```Python 3.12```, ```CUDA 13.0```, ```PyTorch 2.8.0``` and ```Torchvision 0.23.0```.
+An example environment:
+
+```
+Ubuntu 24.04
+Python 3.12
+CUDA 13.0
+PyTorch 2.8.0
+Torchvision 0.23.0
+```
 
 Install the required dependencies:
 
@@ -29,24 +35,37 @@ We evaluate FedCKR on four benchmark datasets:
 
 The client data are partitioned using a Dirichlet distribution to construct label-skewed non-IID settings.
 
-The datasets can be downloaded automatically through ```torchvision``` or prepared in a local data directory.
+The datasets can be downloaded through `torchvision` or prepared in the local data directory.
+
+Example directory structure:
+
+```
+data/
+├── cifar10/
+├── cifar100/
+├── fashionmnist/
+└── svhn/
+```
 
 ## Training
 
 FedCKR is designed for personalized federated learning under label-skewed non-IID data.
 
-The complete training implementation and additional reproduction scripts will be released progressively.
+Training scripts and implementation details are provided in this repository.
 
 ## Evaluation
 
-The main evaluation focuses on personalized performance, weak-class performance, and worst-client performance.
+The evaluation includes:
 
-Detailed experimental results are reported in the paper.
+- Personalized Accuracy
+- Weak-Class Accuracy
+- Worst-Client Accuracy
+- Global Accuracy
 
 ## Acknowledgment
 
-We thank the authors of the related federated learning methods and open-source libraries used in this work.
+We thank the authors of related federated learning methods and open-source libraries.
 
 ## LICENSE
 
-License information will be updated with the complete code release.
+This repository is released under the MIT License.
