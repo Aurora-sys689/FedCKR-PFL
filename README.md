@@ -8,7 +8,7 @@ This repository provides code and reproducibility resources for **FedCKR**, a cl
 
 ## Installation
 
-An example environment (works for me):
+An example environment:
 
 ```
 Ubuntu 24.04
